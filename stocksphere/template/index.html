@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>MarketPredict</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo" onclick="showHome()">MarketPredict</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showSection('search-section')">Search</a></li>
+                <li><a href="#" onclick="showSection('news-section'); showNewsSection();">News</a></li>
+                <li><a href="#" onclick="showSection('about-section')">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home-section">
+        <div class="hero">
+            <div class="overlay">
+                <h1>MarketPredict</h1>
+                <p>"Your Guide to Confident Market Moves"</p>
+                <img src="{% static 'images/ss.jpg' %}" alt="Stock Market Illustration">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Other Sections -->
+    <main>
+        <section id="search-section" class="hidden">
+            <h1><b>Search Stocks</b></h1>
+            <iframe src="http://localhost:8501" style="width: 100%; height: 800px; border: none;"></iframe>
+        </section>
+
+        <section id="about-section" class="hidden">
+            <h1>About MarketPredict</h1>
+           <p><b></b>                 MarketPredict is your trusted companion for navigating the dynamic world of stock markets.<br>
+             We empower investors with data-driven insights, real-time news, and advanced predictive <br>tools to make informed decisions. 
+             Our mission is to simplify market analysis and help you confidently move<br> toward your financial goals.
+             Stay ahead of trends, track stocks, and explore opportunities—<br>all in one intuitive platform.</b></p> 
+        </section>
+
+
+     
+      <!-- News Section -->
+       <section id="news-section" class="hidden">
+           <h1><b>Latest Stock News</b></h1>
+           <div id="news-content"></div>
+       </section>
+
+    
+    </main>
+
+    <footer>
+        <p>Search, Analyze, and Invest..</p>
+    </footer>
+</body>
+</html>
